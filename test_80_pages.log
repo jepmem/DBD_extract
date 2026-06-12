@@ -1,0 +1,75 @@
+
+╔══════════════════════════════════════════════════════╗
+║  DBD Full Scraper v7  (datawarehouse.dbd.go.th)      ║
+║  Phase 2: Apify Google Search — no CAPTCHA           ║
+╚══════════════════════════════════════════════════════╝
+
+กรอก รหัส TSIC เช่น 56101 : ดึงกี่หน้า? (Enter = ทั้งหมด) : ค้น Google เบอร์โทรด้วยไหม? [y/n] default=y : 
+พบ checkpoint:
+  [0] checkpoint_56101_p50.json  (500 ราย)
+Resume จาก checkpoint? [y/n] default=n : 
+⚙️  Chrome profile: /Users/mac/Library/Application Support/Google/Chrome/Default
+⚙️  keyword=56101  หน้า=80  Google=✗
+เริ่มเลยไหม? [y/n] :   🌐 ใช้ Chrome จริง: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+  🌐 ใช้ Chrome profile: /Users/mac/Library/Application Support/Google/Chrome/Default
+
+════════════════════════════════════════════════════════════
+  NAVIGATE — keyword=56101
+════════════════════════════════════════════════════════════
+  [1/7] เปิดหน้าแรก...
+  [2/7] คลิก 'ค้นหาแบบมีเงื่อนไข'...
+  [3/7] เลือก 'รหัสประเภทธุรกิจ'...
+  [4/7] กรอก '56101' → ตกลง...
+  [5/7] คลิกแถวผลลัพธ์...
+  [6/7] กด 'แสดงรายชื่อนิติบุคคล'...
+  [7/7] เลือก 'ทุนจดทะเบียน (มาก-น้อย)'...
+      ✓ เรียงตามทุนจดทะเบียนแล้ว
+  [filter] เลือกสถานะ active บนเว็บ DBD...
+      ✓ กรองสถานะ: ยังดำเนินกิจการอยู่, ฟื้นฟู, ควบ, แปรสภาพ
+  ✅ นำทางสำเร็จ
+
+
+════════════════════════════════════════════════════════════
+  PHASE 1 — Scrape รายชื่อนิติบุคคล
+  พบ ~28,038 ราย | 2,804 หน้า
+  จะดึง 80 หน้า
+════════════════════════════════════════════════════════════
+
+  [    1/80]    1%  ✓ 10/10 ราย active  ข้าม 0  (รวม 10)
+  [    2/80]    2%  ✓ 10/10 ราย active  ข้าม 0  (รวม 20)
+  [    3/80]    4%  ✓ 10/10 ราย active  ข้าม 0  (รวม 30)
+  [    4/80]    5%  ✓ 10/10 ราย active  ข้าม 0  (รวม 40)
+  [    5/80]    6%  ✓ 10/10 ราย active  ข้าม 0  (รวม 50)
+  [    6/80]    8%  ✓ 10/10 ราย active  ข้าม 0  (รวม 60)
+  [    7/80]    9%  ✓ 10/10 ราย active  ข้าม 0  (รวม 70)
+  [    8/80]   10%  ✓ 10/10 ราย active  ข้าม 0  (รวม 80)
+  [    9/80]   11%  ✓ 10/10 ราย active  ข้าม 0  (รวม 90)
+  [   10/80]   12%  ✓ 10/10 ราย active  ข้าม 0  (รวม 100)
+  [   11/80]   14%  ✓ 10/10 ราย active  ข้าม 0  (รวม 110)
+  [   12/80]   15%  ✓ 10/10 ราย active  ข้าม 0  (รวม 120)
+  [   13/80]   16%  ✓ 10/10 ราย active  ข้าม 0  (รวม 130)
+  [   14/80]   18%  ✓ 10/10 ราย active  ข้าม 0  (รวม 140)
+  [   15/80]   19%  ✓ 10/10 ราย active  ข้าม 0  (รวม 150)
+  [   16/80]   20%  ✓ 10/10 ราย active  ข้าม 0  (รวม 160)
+  [   17/80]   21%  ✓ 10/10 ราย active  ข้าม 0  (รวม 170)
+  [   18/80]   22%  ✓ 10/10 ราย active  ข้าม 0  (รวม 180)
+  [   19/80]   24%  ✓ 10/10 ราย active  ข้าม 0  (รวม 190)
+  [   20/80]   25%  ✓ 10/10 ราย active  ข้าม 0  (รวม 200)
+  [   21/80]   26%  ✓ 10/10 ราย active  ข้าม 0  (รวม 210)
+  [   22/80]   28%  ✓ 10/10 ราย active  ข้าม 0  (รวม 220)
+  [   23/80]   29%  ✓ 10/10 ราย active  ข้าม 0  (รวม 230)
+  [   24/80]   30%  ✓ 10/10 ราย active  ข้าม 0  (รวม 240)
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/jeep/dbd_scraper.py", line 1077, in <module>
+    asyncio.run(main())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 1854, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/selectors.py", line 562, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+KeyboardInterrupt
