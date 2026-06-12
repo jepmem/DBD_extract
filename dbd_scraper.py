@@ -843,12 +843,13 @@ async def google_search_apify(client: httpx.AsyncClient, name: str, query_count:
 async def enrich_google(companies: list[dict]) -> list[dict]:
     """Phase 2 — ใช้ Apify แทน browser ทั้งหมด"""
 
-    # ตรวจสอบ config
-    if APIFY_API_TOKEN == "YOUR_APIFY_TOKEN_HERE":
-        print("\n  ❌ ยังไม่ได้ตั้งค่า APIFY_API_TOKEN")
-        print("     1. ไปที่ https://console.apify.com/sign-up สมัครฟรี")
-        print("     2. Settings → Integrations → copy Personal API token")
-        print("     3. แก้ตัวแปร APIFY_API_TOKEN ที่ด้านบนของไฟล์")
+    # ตรวจสอบ config — ถ้าไม่มี token ให้ข้าม Phase 2
+    if not APIFY_API_TOKEN:
+        print("\n  ❌ ยังไม่ได้ตั้งค่า APIFY_API_TOKEN — ข้าม Phase 2 (Google lookup)")
+        print("     1. สมัครที่ https://console.apify.com/sign-up")
+        print("     2. คัดลอก Personal API token จาก Settings → Integrations")
+        print("     3. ตั้งค่าเป็น environment variable: export APIFY_API_TOKEN=your_token")
+        print("        หรือคัดลอกค่าไปใส่ในไฟล์ .env (ดู .env.example)")
         return companies
 
     total = len(companies)
